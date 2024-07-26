@@ -1,0 +1,766 @@
+/* 
+Pallet
+#222831
+#31363F
+#76ABAE
+#EEEEEE
+*/
+
+body {
+    background-color: #222831;
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* styling for navigation bar starts here */
+nav {
+    color: #eeeeee;
+    padding: 10px;
+    height: 10vh;
+    max-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #222831;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+/* styling for logo */
+div.logo-div {
+    height: 100%;
+    width: 100%;
+    max-height: 50px;
+    max-width: 50px;
+    display: flex;
+}
+
+div.logo-div > img { 
+    height: 100%;
+    width: 100%;
+}
+/* styling for logo ends */
+
+/* styling for menu bar starts */
+div.menu { 
+    align-items: center;
+    display: flex;
+    align-items: right;
+    justify-content: flex-end;
+    width: 80%;
+    padding-right: 2vw;
+}
+
+div.menu > span {
+    display: flex;
+    margin-right: 2vw;
+    padding: 6px;
+    border:#233145 solid 1px;
+    font-size: 1.2em;
+    background-color: #233145;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: color 0.5s, background-color 0.5s, padding 0.5s, font-size 0.5s;
+}
+
+div.menu > span:hover {
+    background-color: #76ABAE;
+    color: black;
+    padding: 10px;
+    font-size: 1.3em;
+    transition: color 0.5s, background-color 0.5s, padding 0.5s, font-size 0.5s;
+}
+
+div.mobile-menu-button {
+    float: right;
+    height: 5vh;
+    width: 5vh;
+    align-self: center;
+    padding-right: 6vw;
+    display: none;
+}
+
+div.mobile-menu-button > span {
+    display: block;
+    position: absolute;
+    height: 1vh;
+    width: 8vh;
+    border-radius: 1vh;
+    background-color: #eeeeee;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+div.mobile-menu-button > span:first-child {
+    margin-top: 0;
+}
+
+div.mobile-menu-button > span:nth-child(2) {
+    left: 80vw;
+    margin-top: 2vh;
+    transition: all 0.5s;
+}
+
+div.mobile-menu-button > span:last-child {
+    margin-top: 4vh;
+}
+
+div.mobile-menu-button > span:last-child {
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    div.mobile-menu-button {
+        display: block;
+    }
+
+    div.menu {
+        position: fixed;
+        display: block;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        width: 100vw;
+        top: 0;
+        left:100vw;
+        margin-top: 10vh;
+        transition: left 0.5s;
+        padding: 0;
+        box-sizing: content-box;
+    }
+
+    div.menu > span {
+        background-color: rgba(118, 171, 174, 0.3);
+        border: none;
+        color: #222831;
+        border-radius: 0;
+        padding-left: 5vw;
+    }
+    
+}
+
+/* menu bar styling ends */
+/* navigation bar styling ends */
+
+
+/* home page styling starts */
+.home {
+    color: #233145;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .home {
+        flex-direction: column;
+        height: auto;
+    }   
+}
+
+/* Styling for left side of home page */
+.left {
+    width: 50%;
+    height: 100%;
+    background-color: #76ABAE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+@media screen and (max-width: 600px) {
+    .left {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+/* greeting has Hello and intro */
+.greetings {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+
+.hello {
+    font-family: "Playwrite AU QLD";
+    font-size: 3em;
+    padding-left: 20%;
+}
+
+.hello > img {
+    height: 30%;
+    width: 30%;
+    max-width: 150px;
+    max-height: 200px;
+}
+
+@media screen and (max-width: 800px) {
+    .hello {
+        padding-left: 0;
+    }
+
+    .hello> img{
+        display: none;
+    }
+}
+
+/* typewriter animation is worked below */
+.work1{
+    animation: text1;
+}
+
+.work2{
+    animation: text2;
+}
+
+.work3{
+    animation: text3;
+}
+
+.work1, .work2, .work3{
+    font-size: 1.1em;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation-duration: 10s;
+    animation-timing-function: steps(16, end);
+    animation-iteration-count: infinite;
+}
+
+.work1::after, .work2::after, .work3::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+}
+
+@keyframes text1 {
+    0%, 33%, 66%, 100% { width: 0; }
+    5%, 28% { width: 10em; }
+}
+
+@keyframes text2 {
+    0%, 33%, 66%, 100% { width: 0; }
+    71%, 95% { width: 13.5em; }
+   
+}
+@keyframes text3 {
+    0%, 33%, 66%, 100% { width: 0; }
+    38%, 61% { width: 9.5em; }
+}
+
+@keyframes caret {
+    0%, 100% { opacity: 0; }
+    33%, 66% { opacity: 1;}
+}
+/* typewriter animation ends */
+/* greetings section ends */
+
+/* resume link styling starts */
+.left > .resume-link {
+    position: absolute;
+    bottom: 5%;
+    padding: 3vh;
+    background-color: #233145;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s;
+}
+
+.left > .resume-link > a{
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+.left > .resume-link > a > .material-symbols-outlined {
+    font-size: 1.2em;
+}
+
+.top-left, .side-lower {
+    position: absolute;
+    height: 15vw;
+    width: 15vw;
+    max-height: 200px;
+    max-width: 200px;
+    z-index: 2;
+}
+
+.top-left > img, .side-lower > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.top-left {
+    top: 10%;
+    left: 0;
+}
+
+.side-lower {
+    bottom: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .top-left, .side-lower {
+        display: none;
+    }
+    
+}
+/* resume link styling ends */
+/* left section styling ends */
+
+/* right section stylings starts */
+.right {
+    width: 50%;
+    color: #eeeeee;
+    background-color: #222831;
+    padding: 15vh 2vw 1vw 2vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    z-index: 2;
+}
+
+@media screen and (max-width: 600px) {
+    .right {
+        width: 100%;
+        padding: 4vh 2vw 1vh 2vw;
+        height: auto;
+    }
+}
+
+.right > div {
+    width: 100%;
+    display: inline-block;
+}
+
+.right > .latest-updates {
+    font-size: 2em;
+    margin-bottom: 3vh;
+}
+
+/* update card styling */
+.right > .update {
+    height: 30vh;
+    padding: 2%;
+    box-sizing: border-box;
+    border: #233145 solid 1px;
+    border-radius: 10px;
+    background-color: #2d405a;
+    min-height: 30vh;
+    max-height: fit-content;
+    margin-bottom: 2vh;
+}
+
+.right > .update > .title {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 2vh;
+    
+}
+
+.right > .update > .title > .title-without-open {
+    display: -webkit-box;
+    width: 90%;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+}
+
+.right > .update > .title > .title-without-open > .type {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    margin-bottom: 1vh;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.right > .update > .title > .title-without-open > .name {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    margin-bottom: 1vh;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.right > .update > .title > .open-link{
+    float: right;
+    align-self: center;
+}
+
+.update-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.update-info > .update-image {
+    display: inline-block;
+    overflow: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+    height: 19vh;
+    width: 90%;
+}
+
+.update-info > .update-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right > .update > .update-info> .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* right section ended */
+
+/* about section starts here */
+.about {
+    background-color: #2d405a;
+    color: #eeeeee;
+    padding: 2vw;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* styline of sidebar of about section */
+.about > .left-heading {
+    font-size: 4em;
+    font-family: "Playwrite AU QLD";
+    width: 20%;
+    height: 100vh;
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    text-orientation:mixed;
+    position:fixed;
+    left: 0;
+    top: 0;
+    padding-top: 25vh;
+    padding-right: 7vw;
+    box-sizing: border-box;
+    z-index: 1;
+    opacity: 0;
+    transform: all 1s;
+}
+
+.about > .mobile-heading {
+    font-size: 2em;
+    font-family: "Playwrite AU QLD";
+    padding-left: 2vw;
+    display: none;
+}
+
+
+/* styling of personal info section */
+.about > .info {
+    width: 100%;
+    padding: 2vh 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+    .about {
+        flex-direction: column;
+    }
+    .about > .mobile-heading {
+        display: block;
+    }
+    .about > .left-heading {
+        display: none;
+    }
+    .about >.info {
+        padding: 2vh 2vw;
+    }
+}
+
+.about > .info > div > .about-image > img {
+    height: 25vh;
+    width: 25vh;
+    max-height: 200px;
+    max-width: 200px;
+    margin: 2vh;
+    margin-top: 0;
+    border-radius: 50%;
+}
+
+.about > .info > div > .details > span{
+    display: block;
+    text-align: start;
+}
+
+.about > .info > div > .details > .name{
+    font-size: 1.5em;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 10px;
+}
+
+.about > .info > div > .details > .designation{
+    font-size: 1.2em;
+    line-height: 1.3em;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 10px;
+    color: #cccccc;
+}
+
+.about > .info > div > .description {
+    font-size: 1em;
+    font-family: "Rubik", sans-serif;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+}
+
+/* styling of personal info skills */
+.about > .info > div > .skills-tab {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.about > .info > div > .skills-tab > span{
+    padding: 4px 8px;
+    margin: 4px;
+    background-color: #76ABAE;
+    border-radius: 10px;
+    color: #222831;
+    transition: all 0.5s;
+}
+
+.about > .info > div > .skills-tab > span:hover{
+    background-color: #8cc3c6;
+    border-radius: 2px;
+    transition: all 0.5s;
+}
+
+/* styling for divider bar */
+.divider {
+    height: 2px;
+    width: 100%;
+    background-color: #eeeeee;
+    margin: 5vh 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.divider > .circle {
+    height: 20px;
+    width: 20px;
+    background-color: #eeeeee;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* about section ends here */
+
+/* experience section styling starts here */
+.experience {
+    background-color: #76ABAE;
+    color: #222831;
+    width: 100%;
+    padding: 2vh 20vw;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+    .experience {
+        padding: 2vh 4vw;
+        box-sizing: border-box;
+    }
+}
+
+.experience > .experience-header {
+    font-size: 2em;
+    font-family: "Josefin Sans", sans-serif;
+    margin: 2vh;
+    text-align: center;
+}
+
+.experience > .experience-card {
+    display: flex;
+    width: 100%;
+    padding: 2vh;
+    background-color: #233145;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border-right: #2d405a solid 5px;
+    color: #eeeeee;
+}
+
+.experience > .experience-card > .side-design {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 2.25em;
+    height: unset;
+    min-width: 20px;
+    justify-content: space-around;
+}
+
+.experience > .experience-card > .side-design > .main-design {
+    height: 100%;
+    width: 4px;
+    position:absolute;
+    background-color: #eeeeee;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    margin-left: 1em;
+}
+
+
+.experience > .experience-card > .experience-info {
+    width: 90%;
+    padding: 2vh;
+    box-sizing: border-box;
+}
+
+.experience > .experience-card > .experience-info > .container > .circle {
+    width: 100%;
+    height: 1.5em;
+    position: absolute;
+    transform: translateX(-2.625em);
+}
+
+.experience > .experience-card > .experience-info > .container > .circle > span {
+    display: inline-block;
+    position: absolute;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 1em;
+    background-color: #eeeeee;
+}
+.experience > .experience-card > .experience-info > .container > .designation {
+    font-size: 1.5em;
+    font-family: "Josefin Sans", sans-serif;
+    line-height: 1.5em;
+}
+
+
+.experience > .experience-card > .experience-info > .container > .company-name{
+    font-size: 1em;
+    font-family: "Josefin Sans", sans-serif;
+    line-height: 1.2em;
+}
+
+.experience > .experience-card > .experience-info > .container > .duration{
+    font-size: 0.8em;
+    line-height: 1em;
+    color: #bbb;
+    margin-bottom: 1em;
+}
+
+.experience > .experience-card > .experience-info > .container > .description {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+/* experience section styling ends */
+
+/* contact section styling starts */
+.contact {
+    background-color: #222831;
+    color: #eeeeee;
+    padding: 4vh 20vw;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+    .contact {
+        padding: 4vh 4vw;
+        box-sizing: border-box;
+    }
+}
+
+.contact > .contact-header {
+    font-size: 2em;
+    font-family: "Josefin Sans", sans-serif;
+    margin: 2vh;
+    text-align: center;
+}
+
+.contact > .contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 2vh 10vw;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 100%;
+    background-color: #76ABAE;
+    color: #222831;
+}
+
+.contact > .contact-box > .contact-info {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+.contact > .contact-box > .contact-links {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.contact > .contact-box > .contact-links > a {
+    color: #222831;
+    text-decoration: none;
+}
+/* contact styling ends here */
+
+/* footer styling starts here */
+.footer {
+    border-top: #76ABAE solid 2px;
+    background-color: #222831;
+    color: #eeeeee;
+    padding: 4vh 10vw 8vh 10vw;
+    text-align: center;
+}
+
+.footer > .tagline {
+    font-family: "Playwrite AU QLD";
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    display: block;
+}
+
+/* .footer > .copyright {
+    padding: 0vw 10vw;
+} */
+/* footer styling ends here */

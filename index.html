@@ -1,0 +1,266 @@
+<!-- 
+This is the personal webiste of Samarth Sonawane.
+This website is created using HTML, CSS and JavaScript.
+Start Date: 23rd July 2024 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!-- icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo-div">
+            <img src="Images\logo.png" alt="">
+        </div>
+        <div class="mobile-menu-button" id="mobile-menu-button" onclick="openMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu">
+            <span>Home</span>
+            <span>About</span>
+            <span>Projects</span>
+            <span>Blogs</span>
+            <span>Contact</span>
+        </div>
+    </nav>
+    <section class="home">
+        <div class="left">
+            <div class="greetings">
+                <span class="hello">Hello<img src="Images/hello_design.png" alt=""></span>
+                <br>
+                <span class="name">I'm Samarth Sonawane</span>
+                <br>
+                <span class="work1">Full Stack Developer</span><span class="work2">Creative Graphics
+                    Designer</span><span class="work3">AI & ML Enthusiast</span>
+            </div>
+            <div class="resume-link">
+                <a href="Resume.pdf" target="_blank"><span class="material-symbols-outlined">
+                        more_up
+                    </span> Résumé</a>
+            </div>
+            <div class="top-left">
+                <img src="Images/top-left.png" alt="">
+            </div>
+            <div class="side-lower">
+                <img src="Images/side_lower.png" alt="">
+            </div>
+        </div>
+        <div class="right">
+            <div class="latest-updates">
+                Latest Updates
+            </div>
+            <div class="update">
+                <span class="title">
+                    <span class="title-without-open"> 
+                        <span class="type">Project: </span>
+                        <span class="name">Personal Website</span>
+                    </span>
+                    <span class="material-symbols-outlined open-link">
+                        open_in_new
+                    </span>
+                </span>
+                <div class="update-info">
+                    <span class="update-image">
+                        <img src="Images/side lower.png" alt="">
+                    </span>
+                    <span class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi laboriosam provident expedita
+                        placeat! Harum, similique mollitia reiciendis minima neque voluptatem eius rerum ratione
+                        adipisci nisi in vitae a at magnam aspernatur officiis voluptates cumque dignissimos impedit
+                        eligendi doloremque, reprehenderit vero delectus! Accusamus perspiciatis a numquam dolorem neque
+                        id iste ex?
+                    </span>
+                </div>
+            </div>
+            <div class="update">
+                <span class="title">
+                    <span class="title-without-open">
+                        <span class="type">Project: </span>
+                        <span class="name">Notes App</span>
+                    </span>
+                    <span class="material-symbols-outlined open-link">
+                        open_in_new
+                    </span>
+                </span>
+                <div class="update-info">
+                    <span class="update-image">
+                        <img src="Images/side lower.png" alt="">
+                    </span>
+                    <span class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi laboriosam provident expedita
+                        placeat! Harum, similique mollitia reiciendis minima neque voluptatem eius rerum ratione
+                        adipisci nisi in vitae a at magnam aspernatur officiis voluptates cumque dignissimos impedit
+                        eligendi doloremque, reprehenderit vero delectus! Accusamus perspiciatis a numquam dolorem neque
+                        id iste ex?
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="left-heading" , id="left-heading">
+            <span>
+                About Me
+            </span>
+        </div>
+        <div class="mobile-heading">
+            About Me
+        </div>
+        <div class="info">
+            <div class="about-me">
+                <div class="about-image">
+                    <img src="Images/side lower.png" alt="">
+                </div>
+                <div class="details">
+                    <span class="name">
+                        Samarth Sonawane
+                    </span>
+                    <span class="designation">
+                        Sophomore @ IIT Gandhinagar | B.Tech in Computer Science | Full Stack Developer | Passionate
+                        about
+                        AI & ML | Creative Graphics Designer
+                    </span>
+                </div>
+                <div class="description">
+                    Hello! I'm Samarth Sonawane, a sophomore at IIT Gandhinagar pursuing a B.Tech in Computer Science.
+                    As a hobbyist coder, I am always eager to learn new technologies. I am a Full Stack Developer
+                    proficient in Web and Mobile App Development, with a passion for AI & ML, having worked on various
+                    projects in these fields. Additionally, I am a creative Graphics Designer, experienced in designing
+                    posters, banners, logos, and more.
+                </div>
+                <div class="skills-tab">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>MySQL</span>
+                    <span>C</span>
+                    <span>Dart</span>
+                    <span>Flutter</span>
+                    <span>Numpy</span>
+                    <span>Pandas</span>
+                    <span>Matplotlib</span>
+                    <span>Data Structures</span>
+                    <span>Linear Regression</span>
+                    <span>Logistic Regression</span>
+                    <span>Decision Trees</span>
+                    <span>Random Forest</span>
+                    <span>PCA</span>
+                    <span>Clustering</span>
+                    <span>Recommender Systems</span>
+                    <span>Reinforcement Learning</span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <section class="experience">
+        <div class="experience-header">
+            <span>
+                Experience
+            </span>
+        </div>
+        <div class="experience-card">
+            <div class="side-design">
+                <div class="top"></div>
+                <div class="main-design">
+                </div>
+            </div>
+            <div class="experience-info">
+                <div class="container">
+                    <div class="circle">
+                        <span></span>
+                    </div>
+                    <div class="designation">
+                        Graphics Designer
+                    </div>
+                    <div class="company-name">
+                        InterIIT Sports
+                    </div>
+                    <div class="duration">
+                        June 2021 - Present
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quas unde ducimus nesciunt facilis itaque praesentium, obcaecati aliquam cupiditate temporibus delectus dolores optio voluptas eos architecto? Perspiciatis recusandae magnam et non quibusdam eius, aut tempore cumque fuga, error asperiores unde reprehenderit reiciendis labore hic repellat. Incidunt possimus expedita odit ad.
+                    </div>
+                </div>
+                <div class="spacer" style="height: 3em; width: 100%;"></div>
+                <div class="container">
+
+                    <div class="circle">
+                        <span></span>
+                    </div>
+                    <div class="designation">
+                        Graphics Designer
+                    </div>
+                    <div class="company-name">
+                        InterIIT Sports
+                    </div>
+                    <div class="duration">
+                        June 2021 - Present
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quas unde ducimus nesciunt facilis itaque praesentium, obcaecati aliquam cupiditate temporibus delectus dolores optio voluptas eos architecto? Perspiciatis recusandae magnam et non quibusdam eius, aut tempore cumque fuga, error asperiores unde reprehenderit reiciendis labore hic repellat. Incidunt possimus expedita odit ad.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="contact-header">
+            <span>
+                Contact
+            </span>
+        </div>
+        <div class="contact-box">
+            <div class="contact-info">
+                You can drop an email or contact me on my phone number
+            </div>
+            <div class="contact-links">
+                <a href="tel:+918459367706">
+                    <span class="material-symbols-outlined call">call</span>
+                </a>
+                <a href="mailto:23110317@iitgn.ac.in">
+                    <span class="material-symbols-outlined">mail</span>
+                </a>
+                <a href="https://www.linkedin.com/samarth-sonawane">
+                    <img src="Images/linkedin-svgrepo-com.svg" alt="" style="height: 1em; width: 1em;">
+                </a>
+                <a href="https://www.github.com/samarth2015">
+                    <img src="Images/github-142-svgrepo-com.svg" alt="" style="height: 1em; width: 1em;">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <span class="tagline">Code with purpose, design with passion. 🚀🎨</span>
+        <span class="copyright">Samarth Sonawane &copy; 2024 <br> All rights reversed. Remix, reimagine, repeat! 🔄💙</span>
+    </section>
+</body>
+
+</html>
