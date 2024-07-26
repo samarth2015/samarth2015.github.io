@@ -11,6 +11,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Rubik", sans-serif;
+    overflow-x: hidden;
 }
 
 @media screen and (max-width: 600px) {
@@ -97,7 +98,7 @@ div.mobile-menu-button > span {
     display: block;
     position: absolute;
     height: 1vh;
-    width: 8vh;
+    width: 15vw;
     border-radius: 1vh;
     background-color: #eeeeee;
     box-sizing: border-box;
@@ -109,7 +110,7 @@ div.mobile-menu-button > span:first-child {
 }
 
 div.mobile-menu-button > span:nth-child(2) {
-    left: 80vw;
+    left: 74vw;
     margin-top: 2vh;
     transition: all 0.5s;
 }
@@ -124,6 +125,11 @@ div.mobile-menu-button > span:last-child {
 
 
 @media screen and (max-width: 600px) {
+    nav{
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
     div.mobile-menu-button {
         display: block;
     }
@@ -635,20 +641,21 @@ div.mobile-menu-button > span:last-child {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 2.25em;
+    width: 2em;
     height: unset;
     min-width: 20px;
     justify-content: space-around;
 }
 
 .experience > .experience-card > .side-design > .main-design {
-    height: 100%;
+    height: 96%;
     width: 4px;
     position:absolute;
     background-color: #eeeeee;
     margin: 0 auto;
-    margin-top: 1.5em;
+    margin-top: 4vh;
     margin-left: 1em;
+    transform: translateX(-2px);
 }
 
 
@@ -662,7 +669,7 @@ div.mobile-menu-button > span:last-child {
     width: 100%;
     height: 1.5em;
     position: absolute;
-    transform: translateX(-2.625em);
+    /* transform: translateX(-11.25vw); */
 }
 
 .experience > .experience-card > .experience-info > .container > .circle > span {

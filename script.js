@@ -1,5 +1,9 @@
 window.onload = function() {
-    
+    translate_val = window.innerHeight*0.02 + 28 + 'px';
+    circles = document.getElementsByClassName('circle');
+    for (i = 0; i < circles.length; i++) {
+        circles[i].style.transform = 'translateX(-' + translate_val + ')';
+    }
 };
 
 window.addEventListener('scroll', function() {
@@ -34,7 +38,7 @@ function openMobileMenu() {
         children[0].style.transform = 'rotate(0deg)';
         children[0].style.marginTop = '0';
         children[1].style.opacity = '1';
-        children[1].style.left = '80vw';
+        children[1].style.left = '74vw';
         children[2].style.transform = 'rotate(0deg)';
         children[2].style.marginTop = '4vh';
     } else {
