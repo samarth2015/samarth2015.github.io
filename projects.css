@@ -1,0 +1,118 @@
+.projects {
+    margin: 10vh 10vw;
+}
+
+@media screen and (max-width: 800px) {
+    .projects {
+        margin: 10vh 5vw;
+    }
+}
+
+.projects > .heading {
+    font-size: 4em;
+    margin: 20vh 0 10vh 0;
+    font-family: "Josefin Sans", sans-serif;
+    color: #eeeeee;
+    text-align: center;
+}
+
+.projects > .search-bar {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.projects > .search-bar > input {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    margin: 0 0 2em 0;
+    box-sizing: border-box;
+    color: #eeeeee;
+    background-color: #394456;
+}
+
+.projects > .search-bar > input:focus {
+    outline: none;
+}
+
+.projects > .search-bar > input::placeholder {
+    color: #cccccc;
+}
+
+
+.projects > .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1em;
+}
+
+.projects > .projects-container > .projects-info {
+    box-sizing: border-box;
+    background-color: #394456;
+    padding: 1em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-image: url("Images/side_lower.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.projects > .projects-container > .projects-info > .project-heading {
+    align-self: baseline;
+    font-family: "Josefin Sans", sans-serif;
+    color: #eeeeee;
+    text-align: center;
+    padding: 2vh;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transform: translateY(150%);
+    transition: transform 0.5s;
+}
+
+.projects > .projects-container > .projects-info > .project-heading > .title {
+    font-size: 1.5em;
+}
+
+.projects > .projects-container > .projects-info > .project-heading > .title > .duration {
+    font-size: 0.6em;
+    color: #cccccc;
+}
+
+.projects > .projects-container > .projects-info > .project-heading > .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 600px) {
+    .projects > .projects-container > .projects-info > .project-heading > .description {
+        display: none;
+    }
+
+    .projects > .projects-container > .projects-info > .project-heading{
+        transform: translateY(0);
+        justify-content: flex-end;
+        backdrop-filter: blur(0);
+        text-shadow: 2px 2px 5px #15181c;
+    }
+    
+}
+
+.projects > .projects-container > .projects-info:hover > .project-heading {
+        transform: translateY(0);
+        transition: transform 0.5s;
+}

@@ -1,0 +1,122 @@
+
+/* about section starts here */
+.about {
+    background-color: #2d405a;
+    color: #eeeeee;
+    padding: 2vw;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* styline of sidebar of about section */
+.about > .left-heading {
+    font-size: 4em;
+    font-family: "Playwrite AU QLD";
+    width: 20%;
+    height: 100vh;
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    text-orientation:mixed;
+    position:fixed;
+    left: 0;
+    top: 0;
+    padding-top: 25vh;
+    padding-right: 7vw;
+    box-sizing: border-box;
+    z-index: 1;
+    opacity: 0;
+    transform: all 1s;
+}
+
+.about > .mobile-heading {
+    font-size: 2em;
+    font-family: "Playwrite AU QLD";
+    padding-left: 2vw;
+    display: none;
+}
+
+
+/* styling of personal info section */
+.about > .info {
+    width: 100%;
+    padding: 2vh 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+    .about {
+        flex-direction: column;
+    }
+    .about > .mobile-heading {
+        display: block;
+    }
+    .about > .left-heading {
+        display: none;
+    }
+    .about >.info {
+        padding: 2vh 2vw;
+    }
+}
+
+.about > .info > div > .about-image > img {
+    height: 25vh;
+    width: 25vh;
+    max-height: 200px;
+    max-width: 200px;
+    margin: 2vh;
+    margin-top: 0;
+    border-radius: 50%;
+}
+
+.about > .info > div > .details > span{
+    display: block;
+    text-align: start;
+}
+
+.about > .info > div > .details > .name{
+    font-size: 1.5em;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 10px;
+}
+
+.about > .info > div > .details > .designation{
+    font-size: 1.2em;
+    line-height: 1.3em;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 10px;
+    color: #cccccc;
+}
+
+.about > .info > div > .description {
+    font-size: 1em;
+    font-family: "Rubik", sans-serif;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+}
+
+/* styling of personal info skills */
+.about > .info > div > .skills-tab {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.about > .info > div > .skills-tab > span{
+    padding: 4px 8px;
+    margin: 4px;
+    background-color: #76ABAE;
+    border-radius: 10px;
+    color: #222831;
+    transition: all 0.5s;
+}
+
+.about > .info > div > .skills-tab > span:hover{
+    background-color: #8cc3c6;
+    border-radius: 2px;
+    transition: all 0.5s;
+}

@@ -1,0 +1,22 @@
+
+
+/* footer styling starts here */
+.footer {
+    border-top: #76ABAE solid 2px;
+    background-color: #222831;
+    color: #eeeeee;
+    padding: 4vh 10vw 8vh 10vw;
+    text-align: center;
+}
+
+.footer > .tagline {
+    font-family: "Playwrite AU QLD";
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    display: block;
+}
+
+/* .footer > .copyright {
+    padding: 0vw 10vw;
+} */
+/* footer styling ends here */

@@ -1,0 +1,143 @@
+/* styling for navigation bar starts here */
+nav {
+    color: #eeeeee;
+    padding: 10px;
+    height: 10vh;
+    max-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #222831;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+/* styling for logo */
+div.logo-div {
+    height: 100%;
+    width: 100%;
+    max-height: 50px;
+    max-width: 50px;
+    display: flex;
+}
+
+div.logo-div > img { 
+    height: 100%;
+    width: 100%;
+}
+/* styling for logo ends */
+
+/* styling for menu bar starts */
+div.menu { 
+    align-items: center;
+    display: flex;
+    align-items: right;
+    justify-content: flex-end;
+    width: 80%;
+    padding-right: 2vw;
+}
+
+div.menu > span {
+    display: flex;
+    margin-right: 2vw;
+    padding: 6px;
+    border:#233145 solid 1px;
+    font-size: 1.2em;
+    background-color: #233145;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: color 0.5s, background-color 0.5s, padding 0.5s, font-size 0.5s;
+}
+
+div.menu > span > a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+div.menu > span:hover {
+    background-color: #76ABAE;
+    color: black;
+    padding: 10px;
+    font-size: 1.3em;
+    transition: color 0.5s, background-color 0.5s, padding 0.5s, font-size 0.5s;
+}
+
+div.mobile-menu-button {
+    float: right;
+    height: 5vh;
+    width: 5vh;
+    align-self: center;
+    padding-right: 6vw;
+    display: none;
+}
+
+div.mobile-menu-button > span {
+    display: block;
+    position: absolute;
+    height: 1vh;
+    width: 15vw;
+    border-radius: 1vh;
+    background-color: #eeeeee;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+div.mobile-menu-button > span:first-child {
+    margin-top: 0;
+}
+
+div.mobile-menu-button > span:nth-child(2) {
+    left: 74vw;
+    margin-top: 2vh;
+    transition: all 0.5s;
+}
+
+div.mobile-menu-button > span:last-child {
+    margin-top: 4vh;
+}
+
+div.mobile-menu-button > span:last-child {
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    nav{
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    div.mobile-menu-button {
+        display: block;
+    }
+
+    div.menu {
+        position: fixed;
+        display: block;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        width: 100vw;
+        top: 0;
+        left:100vw;
+        margin-top: 10vh;
+        transition: left 0.5s;
+        padding: 0;
+        box-sizing: content-box;
+    }
+
+    div.menu > span {
+        background-color: rgba(118, 171, 174, 0.3);
+        border: none;
+        color: #222831;
+        border-radius: 0;
+        padding-left: 5vw;
+    }
+    
+}
+
+/* menu bar styling ends */
+/* navigation bar styling ends */

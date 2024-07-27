@@ -1,4 +1,5 @@
 window.onload = function() {
+    
     translate_val = window.innerHeight*0.02 + 28 + 'px';
     circles = document.getElementsByClassName('circle');
     for (i = 0; i < circles.length; i++) {

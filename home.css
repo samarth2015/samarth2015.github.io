@@ -1,0 +1,298 @@
+/* home page styling starts */
+.home {
+    color: #233145;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .home {
+        flex-direction: column;
+        height: auto;
+    }   
+}
+
+/* Styling for left side of home page */
+.left {
+    width: 50%;
+    height: 100%;
+    background-color: #76ABAE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+@media screen and (max-width: 600px) {
+    .left {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+/* greeting has Hello and intro */
+.greetings {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+
+.hello {
+    font-family: "Playwrite AU QLD";
+    font-size: 3em;
+    padding-left: 20%;
+}
+
+.hello > img {
+    height: 30%;
+    width: 30%;
+    max-width: 150px;
+    max-height: 200px;
+}
+
+@media screen and (max-width: 800px) {
+    .hello {
+        padding-left: 0;
+    }
+
+    .hello> img{
+        display: none;
+    }
+}
+
+/* typewriter animation is worked below */
+.work1{
+    animation: text1;
+}
+
+.work2{
+    animation: text2;
+}
+
+.work3{
+    animation: text3;
+}
+
+.work1, .work2, .work3{
+    font-size: 1.1em;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation-duration: 10s;
+    animation-timing-function: steps(16, end);
+    animation-iteration-count: infinite;
+}
+
+.work1::after, .work2::after, .work3::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+}
+
+@keyframes text1 {
+    0%, 33%, 66%, 100% { width: 0; }
+    5%, 28% { width: 10em; }
+}
+
+@keyframes text2 {
+    0%, 33%, 66%, 100% { width: 0; }
+    71%, 95% { width: 13.5em; }
+   
+}
+@keyframes text3 {
+    0%, 33%, 66%, 100% { width: 0; }
+    38%, 61% { width: 9.5em; }
+}
+
+@keyframes caret {
+    0%, 100% { opacity: 0; }
+    33%, 66% { opacity: 1;}
+}
+/* typewriter animation ends */
+/* greetings section ends */
+
+/* resume link styling starts */
+.left > .resume-link {
+    position: absolute;
+    bottom: 5%;
+    padding: 3vh;
+    background-color: #233145;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s;
+}
+
+.left > .resume-link > a{
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+.left > .resume-link > a > .material-symbols-outlined {
+    font-size: 1.2em;
+}
+
+.top-left, .side-lower {
+    position: absolute;
+    height: 15vw;
+    width: 15vw;
+    max-height: 200px;
+    max-width: 200px;
+    z-index: 2;
+}
+
+.top-left > img, .side-lower > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.top-left {
+    top: 10%;
+    left: 0;
+}
+
+.side-lower {
+    bottom: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .top-left, .side-lower {
+        display: none;
+    }
+
+    .left > .resume-link {
+        position: relative;
+        bottom: 0;
+    }
+    
+}
+/* resume link styling ends */
+/* left section styling ends */
+
+/* right section stylings starts */
+.right {
+    width: 50%;
+    color: #eeeeee;
+    background-color: #222831;
+    padding: 15vh 2vw 1vw 2vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    z-index: 2;
+}
+
+@media screen and (max-width: 600px) {
+    .right {
+        width: 100%;
+        padding: 4vh 2vw 1vh 2vw;
+        height: auto;
+    }
+}
+
+.right > div {
+    width: 100%;
+    display: inline-block;
+}
+
+.right > .latest-updates {
+    font-size: 2em;
+    margin-bottom: 3vh;
+}
+
+/* update card styling */
+.right > .update {
+    height: 30vh;
+    padding: 2%;
+    box-sizing: border-box;
+    border: #233145 solid 1px;
+    border-radius: 10px;
+    background-color: #2d405a;
+    min-height: 30vh;
+    max-height: fit-content;
+    margin-bottom: 2vh;
+}
+
+.right > .update > .title {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 2vh;
+    
+}
+
+.right > .update > .title > .title-without-open {
+    display: -webkit-box;
+    width: 90%;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+}
+
+.right > .update > .title > .title-without-open > .type {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    margin-bottom: 1vh;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.right > .update > .title > .title-without-open > .name {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    margin-bottom: 1vh;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.right > .update > .title > .open-link{
+    float: right;
+    align-self: center;
+}
+
+.update-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.update-info > .update-image {
+    display: inline-block;
+    overflow: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+    height: 19vh;
+    width: 90%;
+}
+
+.update-info > .update-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right > .update > .update-info> .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* right section ended */

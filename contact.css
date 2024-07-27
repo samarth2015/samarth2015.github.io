@@ -1,0 +1,57 @@
+
+/* contact section styling starts */
+.contact {
+    background-color: #222831;
+    color: #eeeeee;
+    padding: 4vh 20vw;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+    .contact {
+        padding: 4vh 4vw;
+        box-sizing: border-box;
+    }
+}
+
+.contact > .contact-header {
+    font-size: 2em;
+    font-family: "Josefin Sans", sans-serif;
+    margin: 2vh;
+    text-align: center;
+}
+
+.contact > .contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 2vh 10vw;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 100%;
+    background-color: #76ABAE;
+    color: #222831;
+}
+
+.contact > .contact-box > .contact-info {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+.contact > .contact-box > .contact-links {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.contact > .contact-box > .contact-links > a {
+    color: #222831;
+    text-decoration: none;
+}
+/* contact styling ends here */
