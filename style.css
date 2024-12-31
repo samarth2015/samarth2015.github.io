@@ -765,14 +765,14 @@ body {
     align-items: center;
     text-align: center;
     font-family: "Pacifico", cursive;
-    font-size: 20px;
+    font-size: 16px;
     border-top: 3px solid #47dcfa;
     background-image: linear-gradient(145deg, #E95793e5, #DA0C81e5, #940B92e5, #610C9Fe5, #940B92e5, #DA0C81e5, #E95793e5);
     background-size: 180% 100%;
     color: #47dcfa;
     .copyright{
         font-family: "Quicksand";
-        font-size: 15px;
+        font-size: 12px;
         display: block;
         margin: 15px 0px;
     }
